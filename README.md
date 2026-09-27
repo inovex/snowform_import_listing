@@ -11,7 +11,7 @@ This module simplifies the process of:
 
 ## Prerequisites
 
-- Terraform >= 1.0
+- Terraform/OpenTofu >= 1.7
 - Snowflake provider >= 2.1.0, < 3.0.0
 - Access to Snowflake with appropriate privileges (SYSADMIN role)
 - Approved access to the shares you want to import
@@ -22,7 +22,7 @@ This module simplifies the process of:
 
 ```hcl
 module "snowflake_shared_databases" {
-  source = "github.com/inovex/snowflake-import-listing.git?ref=0.0.2"
+  source = "github.com/inovex/snowform_import_listing.git?ref=0.0.1"
 
   providers = {
     snowflake.sysadmin      = snowflake.sysadmin
@@ -46,7 +46,7 @@ module "snowflake_shared_databases" {
 
 ```hcl
 module "snowflake_shared_databases" {
-  source = "github.com/inovex/snowflake-import-listing.git?ref=0.0.2"
+  source = "github.com/inovex/snowform_import_listing.git?ref=0.0.1"
 
   providers = {
     snowflake.sysadmin      = snowflake.sysadmin
